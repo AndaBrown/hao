@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurielの起始页</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="author" content="Auriel" />
+    <meta name="description" content="Aurielの起始页,简洁美观的起始页,汇集全网优质网址,支持自定义的起始页" />
+    <meta name="keywords" content="Auriel,起始页,浏览器起始页,简洁美观的起始页,汇集全网优质网址,支持自定义的起始页,收集整理了实用工具、通讯社交、休闲娱乐、设计灵感、应用开发等多种类别的网站,Browser Start Page,auriel.top" />
+    <!-- jQuery -->
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/font.css">
+    <link rel="stylesheet" type="text/css" href="./css/loading.css">
+    <link rel="stylesheet" type="text/css" href="./css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="./css/animation.css">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/js/all.min.js"></script>
+    <!-- Izitoast -->
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/css/iziToast.min.css">
+    <script type="text/javascript" src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/js/iziToast.min.js"></script>
+    <!-- IE Out -->
+    <script>
+        if ( /*@cc_on!@*/ false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href =
+            "https://support.dmeng.net/upgrade-your-browser.html?referrer=" + encodeURIComponent(window.location
+            .href);
+    </script>
+    <!--Google Analytics(gtag)-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVK0S6H59D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WVK0S6H59D');
+    </script>
+    <!--Microsoft Clarity-->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "fu11495sl7");
+    </script>
+    <!--百度统计-->
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6f06504e0effd8ada0d6de8da7cdb9c1";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <!--51LA统计-->
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"JgqPSyTX0bBpPwXV",ck:"JgqPSyTX0bBpPwXV"})</script>
+    <!--灵雀应用监控-->
+    <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+    <script>
+      new LingQue.Monitor().init({id:"Jk6zc9D356fnVo2s",sendSuspicious:true});
+    </script>
+    <script>
+    /* Only register a service worker if it's supported */
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>
+</head>
+
+<body>
+    <!--加载动画-->
+    <div id="loading-box">
+        <div class="loading-left-bg"></div>
+        <div class="loading-right-bg"></div>
+        <div class="spinner-box">
+            <div class="loader">
+                <div class="inner one"></div>
+                <div class="inner two"></div>
+                <div class="inner three"></div>
+            </div>
+            <div class="loading-word">
+                <p class="loading-title">Aurielの起始页</p>
+                <span id="loading-text">加载中</span>
+            </div>
+        </div>
+    </div>
+    <!-- 背景图片 -->
+    <div class="bg-all">
+        <img id="bg" onerror="this.classList.add('error');"></img>
+        <div class="cover"></div>
+    </div>
+    <!-- 主体内容 -->
+    <section id="section" class="section">
+        <div id="content">
+            <div class="con">
+                <!-- 时间天气 -->
+                <div class="tool-all">
+                    <div class="time">
+                        <span id="time_text"><span id="point"></span></span>
+                        <span id="day"></span>
+                    </div>
+                </div>
+                <!-- 搜索框 -->
+                <div class="close_sou"></div>
+                <div class="sou">
+                    <form class="search" action="https://www.google.com/search" target="_blank">
+                        <div class="all-search">
+                            <div class="se" title="点击切换搜索引擎">
+                                <i id="icon-se" class="iconfont icon-sousuo"></i>
+                            </div>
+                            <input class="wd" type="text" name="q" placeholder="想要搜点什么" autocomplete="off">
+                            <div class="sou-button">
+                                <div class="s" id="s-button">
+                                    <i id="icon-sou" class="iconfont icon-sousuo"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" id="search-submit" style="display: none;">
+                    </form>
+                    <div id="keywords" style="display: none;"></div>
+                    <div class="search-engine" style="display: none;">
+                        <div class="search-engine-list"></div>
+                    </div>
+                </div>
+                <!-- 书签页 -->
+                <div class="mark" style="display: none;">
+                    <div class="tab">
+                        <div class="tab-item active">常用</div>
+                        <div class="tab-item">工具</div>
+                        <div class="tab-item">社交</div>
+                        <div class="tab-item">娱乐</div>
+                        <div class="tab-item">设计</div>
+                        <div class="tab-item">开发</div>
+                    </div>
+                    <div class="content products">
+                        <!-- 常用 -->
+                        <div class="mainCont selected">
+                            <div class="quick-all">
+                                <div class="quick"></div>
+                            </div>
+                        </div>
+                        <!--工具-->
+                        <div class="mainCont">
+                            <div class="quick-alls">
+                                <div class="quicks">
+                                    <a href="https://translate.google.com/" target="_blank">谷歌翻译</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.ipip.net/" target="_blank">IPIP.NET</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://ping.sx/" target="_blank">Ping.Sx</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.itdog.cn/" target="_blank">ITDOG</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://tool.chinaz.com/" target="_blank">站长之家</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.toolnb.com/" target="_blank">爱资料工具</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://mail.google.com/" target="_blank">Gmail</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://outlook.live.com/outlook" target="_blank">Outlook</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://mail.163.com/" target="_blank">网易邮箱</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.geogebra.org/" target="_blank">GeoGebra</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://javascriptobfuscator.com/" target="_blank">JS保护</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.bejson.com/" target="_blank">BeJSON</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.tablesgenerator.com/" target="_blank">表格生成器</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://pandao.github.io/editor.md" target="_blank">Editor.md</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://smallpdf.com/" target="_blank">SmallPDF</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://earth.google.com/" target="_blank">Google Earth</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://versus.com/" target="_blank">Versus</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.parsevideo.com/" target="_blank">在线视频解析</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--社交-->
+                        <div class="mainCont">
+                            <div class="quick-alls">
+                                <div class="quicks">
+                                    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.twitter.com/" target="_blank">Twitter</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.reddit.com/" target="_blank">Reddit</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.quora.com/" target="_blank">Quora</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://vk.com/" target="_blank">VK</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.tumblr.com/" target="_blank">Tumblr</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.zhihu.com/" target="_blank">知乎</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.jianshu.com/" target="_blank">简书</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.douban.com/" target="_blank">豆瓣</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.weibo.com/" target="_blank">微博</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://tieba.baidu.com/" target="_blank">百度贴吧</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--娱乐-->
+                        <div class="mainCont">
+                            <div class="quick-alls">
+                                <div class="quicks">
+                                    <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.netflix.com/" target="_blank">Netflix</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.disneyplus.com/" target="_blank">Disney+</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.imdb.com/" target="_blank">IMDb</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.spotify.com/" target="_blank">Spotify</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.pixiv.net/" target="_blank">Pixiv</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://poki.com/" target="_blank">Poki</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.bilibili.com/" target="_blank">BiliBili</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.acfun.cn/" target="_blank">AcFun</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://v.qq.com/" target="_blank">腾讯视频</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.youku.com/" target="_blank">优酷</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.iqiyi.com/" target="_blank">爱奇艺</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.ximalaya.com/" target="_blank">喜马拉雅</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.qidian.com/" target="_blank">起点中文网</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--设计-->
+                        <div class="mainCont">
+                            <div class="quick-alls">
+                                <div class="quicks">
+                                    <a href="https://www.dribbble.com/" target="_blank">Dribbble</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.behance.net/" target="_blank">Behance</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.pinterest.com/" target="_blank">Pinterest</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.iconfinder.com/" target="_blank">IconFinder</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.medium.com/" target="_blank">Medium</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.collectui.com/" target="_blank">CollectUI</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://unsplash.com/" target="_blank">Unsplash</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.designspiration.com/" target="_blank">Designspiration</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.ui.cn/" target="_blank">UICN</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.vcg.com/" target="_blank">视觉中国</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.uisdc.com/" target="_blank">优设</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.zcool.com.cn/" target="_blank">站酷</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.huaban.com/" target="_blank">花瓣</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.designup.cn/" target="_blank">Designup</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.ziticangku.com/" target="_blank">字体仓库</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--开发-->
+                        <div class="mainCont">
+                            <div class="quick-alls">
+                                <div class="quicks">
+                                    <a href="https://github.com/" target="_blank">GitHub</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://about.gitlab.com/" target="_blank">GitLab</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://codepen.io/" target="_blank">CodePen</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.cloudflare.com/" target="_blank">Cloudflare</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.jsdelivr.com/" target="_blank">JsDelivr</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://cdnjs.com/" target="_blank">CdnJs</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.npmjs.com/" target="_blank">Npm</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.fontawesome.com/" target="_blank">FontAwesome</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.swiperjs.com/" target="_blank">Swiper</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.v2ex.com/" target="_blank">V2EX</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://hostloc.com/" target="_blank">全球主机交流</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.segmentfault.com/" target="_blank">SegmentFault</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.w3school.com.cn/" target="_blank">W3school</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://gitee.com/" target="_blank">Gitee</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://msdn.itellyou.cn/" target="_blank">MSDN</a>
+                                </div>
+                                <div class="quicks">
+                                    <a href="https://www.52pojie.cn/" target="_blank">吾爱破解</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 设置图标 -->
+                <div id="menu">
+                    <i id="icon-menu" class="iconfont icon-shezhi"></i>
+                </div>
+                <!-- 设置页 -->
+                <div class="set" style="display: none;">
+                    <div class="tabs">
+                        <div class="tab-items actives">搜索引擎</div>
+                        <div class="tab-items" id="set-quick-menu">快捷方式</div>
+                        <div class="tab-items">背景图片</div>
+                        <div class="tab-items">数据备份</div>
+                    </div>
+                    <div class="contents productss">
+                        <!-- 搜索引擎设置 -->
+                        <div class="mainConts selected">
+                            <div class="set_blocks">
+                                <div class="set_blocks_content">
+                                    <div class="se_list">
+                                        <div class="se_list_table"></div>
+                                    </div>
+                                    <div class="se_add_preinstall">
+                                        <div class="set_se_list_add">
+                                            <span class="set_quick_text">新增</span>
+                                        </div>
+                                        <div class="set_se_list_preinstall">
+                                            <span class="set_quick_text">重置</span>
+                                        </div>
+                                    </div>
+                                    <div class="add_content se_add_content" style="display:none;">
+                                        <div class="froms">
+                                            <div class="from_items">
+                                                <div class="from_text">顺序</div>
+                                                <input type="hidden" name="key_inhere">
+                                                <input type="number" name="key" placeholder="请填入小于20的正整数"
+                                                    autocomplete="off"
+                                                    oninput="if(value>20)value=20;if(value<0)value=0">
+                                            </div>
+                                            <div class="from_items">
+                                                <div class="from_text">名称</div>
+                                                <input type="text" name="title" placeholder="搜索引擎名称" autocomplete="off">
+                                            </div>
+                                            <div class="from_items">
+                                                <div class="from_text">网址</div>
+                                                <input type="url" name="url" placeholder="以https或http开头的URL" autocomplete="off">
+                                            </div>
+                                            <div class="from_items">
+                                                <div class="from_text">字段名</div>
+                                                <input type="text" name="name" placeholder="URL中?后面的字段" autocomplete="off">
+                                            </div>
+                                            <div class="from_items" style="display: none;">
+                                                <input type="text" name="icon" placeholder="iconfont icon-Earth" value="iconfont icon-Earth" disabled="disabled">
+                                            </div>
+                                        </div>
+                                        <div class="from_items button">
+                                            <div class="se_add_save">保存</div>
+                                            <div class="se_add_cancel">取消</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 快捷方式设置 -->
+                        <div class="mainConts">
+                            <div class="set_blocks">
+                                <div class="set_blocks_content">
+                                    <div class="quick_list">
+                                        <div class="quick_list_table"></div>
+                                    </div>
+                                    <div class="se_add_preinstalls">
+                                        <div class="set_quick_list_add">
+                                            <span class="set_quick_text">新增</span>
+                                        </div>
+                                        <div class="set_quick_list_preinstall">
+                                            <span class="set_quick_text">重置</span>
+                                        </div>
+                                    </div>
+                                    <div class="add_content quick_add_content" style="display:none;">
+                                        <div class="froms">
+                                            <div class="from_items">
+                                                <div class="from_text">顺序</div>
+                                                <input type="hidden" name="key_inhere">
+                                                <input type="number" name="key" placeholder="请填入小于100的正整数"
+                                                    autocomplete="off"
+                                                    oninput="if(value>99)value=99;if(value<0)value=0">
+                                            </div>
+                                            <div class="from_items">
+                                                <div class="from_text">名称</div>
+                                                <input type="text" name="title" placeholder="网站名称" autocomplete="off">
+                                            </div>
+                                            <div class="from_items">
+                                                <div class="from_text">网址</div>
+                                                <input type="url" name="url" placeholder="以https或http开头的URL" autocomplete="off">
+                                            </div>
+                                        </div>
+                                        <div class="from_items button">
+                                            <div class="quick_add_save">保存</div>
+                                            <div class="quick_add_cancel">取消</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 背景图片设置 -->
+                        <div class="mainConts">
+                            <div class="set_blocks">
+                                <div class="set_tip">
+                                    <span class="set_text mobile">点击下方选项以切换壁纸，使用除默认壁纸以外的选项可能会导致页面载入缓慢</span>
+                                    <span class="set_text mobile">不建议使用以主色调为白色的壁纸，会导致本站部分元素无法辨认</span>
+                                    <span class="set_text" id="wallpaper_text">请点击选项以查看各项说明，高亮项为选中，选中后刷新页面以生效</span>
+                                </div>
+                                <div class="set_blocks_content">
+                                    <div class="from_container">
+                                        <div class="froms">
+                                            <div class="from_row">
+                                                <div class="from_row_content">
+                                                    <div id="wallpaper">
+                                                        <div class="form-radio">
+                                                            <input type="radio" id="radio1" class="set-wallpaper" name="wallpaper-type" value="1" style="display: none;">
+                                                            <label class="form-radio-label" for="radio1">默认壁纸</label>
+                                                        </div>
+                                                        <div class="form-radio">
+                                                            <input type="radio" id="radio2" class="set-wallpaper" name="wallpaper-type" value="2" style="display: none;">
+                                                            <label class="form-radio-label" for="radio2">每日必应</label>
+                                                        </div>
+                                                        <div class="form-radio">
+                                                            <input type="radio" id="radio3" class="set-wallpaper" name="wallpaper-type" value="3" style="display: none;">
+                                                            <label class="form-radio-label" for="radio3">随机风景</label>
+                                                        </div>
+                                                        <div class="form-radio">
+                                                            <input type="radio" id="radio4" class="set-wallpaper" name="wallpaper-type" value="4" style="display: none;">
+                                                            <label class="form-radio-label" for="radio4">随机二次元</label>
+                                                        </div>
+                                                        <div class="form-radio mobile">
+                                                            <input type="radio" id="radio5" class="set-wallpaper wallpaper-custom" name="wallpaper-type" value="5" style="display: none;">
+                                                            <label class="form-radio-label" for="radio5">自定义壁纸</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div id="wallpaper_url" style="display: none;">
+                                                <div class="from_row">
+                                                    <div class="from_items">
+                                                        <input type="text" name="wallpaper-url" id="wallpaper-url" placeholder="以https或http开头的URL" autocomplete="off">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="from_items button" id="wallpaper-button" style="display: none;">
+                                        <div class="wallpaper_save">保存</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 数据备份设置 -->
+                        <div class="mainConts">
+                            <div class="set_blocks">
+                                <div class="set_tip">
+                                    <span class="set_text">点击导出会将本站文件导出至下载目录</span>
+                                    <span class="set_text">点击导入可选择已备份文件进行恢复</span>
+                                    <span class="set_text">本功能尚未完善，若遇到问题可在设置进行重置</span>
+                                </div>
+                                <div class="set_button">
+                                    <div class="but-ordinary" id="my_data_in">导入</div>
+                                    <div class="but-ordinary" id="my_data_out">导出</div>
+                                    <input type="file" id="my_data_file" name="file" style="display: none">
+                                </div>
+                                <div class="set_version">
+                                    <span class="set_version-text">Powered By <a href="/">Aurielの起始页</a>.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 版权信息 -->
+        <div class="foot">
+            <div class="power">Copyright &copy;
+                <script>document.write('2021 - ' + (new Date()).getFullYear())</script>
+                <a href="https://www.auriel.top/">Auriel</a>.
+            </div>
+        </div>
+    </section>
+    <!-- 主体内容结束 -->
+    <!-- noscript -->
+    <noscript><div class="noscript fixed-top">请开启JavaScript</div></noscript>
+    <!-- JS -->
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/set.js"></script>
+    <script type="text/javascript" src="./js/js.cookie.js"></script>
+</body>
+
+</html>
