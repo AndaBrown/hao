@@ -82,7 +82,35 @@ function time() {
     $("#day").html(mm + "&nbsp;月&nbsp;" + d + "&nbsp;日&nbsp;" + weekday[day]);
     t = setTimeout(time, 1000);
 }
-    
+
+//获取天气
+const apiKey = "2pINe5lcOoPr8cxIOsATPTq4PBpyBcYQ";
+// 获取用户的IP地址
+fetch("https://api.ipify.org")
+  .then(response => response.text())
+  .then(ipAddress => {
+    // 获取用户所在地区的位置信息
+    const locationApiUrl = `https://dataservice.accuweather.com/locations/v1/ipaddress?q=${ipAddress}&apikey=${apiKey}`;
+    return fetch(locationApiUrl);
+  })
+  .then(response => response.json())
+  .then(locationResponse => {
+    const locationKey = locationResponse[0].Key;
+    // 获取用户所在地区的天气信息
+    const weatherApiUrl = `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${apiKey}`;
+    return fetch(weatherApiUrl);
+  })
+  .then(response => response.json())
+  .then(weatherResponse => {
+    $('#wea_text').text(dweatherResponse[0].WeatherTexta);
+    $('#tem').text(weatherResponse[0].Temperature.Metric.Value);
+    $('#temu').text(weatherResponse[0].Temperature.Metric.Unit);
+    $('#windi').text(weatherResponse[0].Wind.Direction.Localized);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+
 //Tab书签页
 $(function () {
     $(".mark .tab .tab-item").click(function () {
